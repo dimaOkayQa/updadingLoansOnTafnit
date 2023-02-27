@@ -106,7 +106,6 @@ public class UpdatingLoans {
     public static void cleanInputValue(SelenideElement input){
         input.click();
         input.clear();
-        sleep(500);
         int size = input.getValue().length();
         while(size>=0){
             input.sendKeys(Keys.BACK_SPACE, Keys.DELETE);
