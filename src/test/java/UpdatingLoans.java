@@ -5,10 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
-import java.time.Duration;
-
 import static com.codeborne.selenide.Selenide.*;
-import static org.codehaus.groovy.runtime.DefaultGroovyMethods.step;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selectors.byAttribute;
 
@@ -58,6 +55,8 @@ public class UpdatingLoans {
         $("div.newHeader").shouldBe(Condition.visible);
 
 
+        //THIS PART SHOULD BE IN A CYCLE
+
         //update loan
 
         String pikadon = "test";
@@ -65,10 +64,6 @@ public class UpdatingLoans {
         $("input#sMKMH").click();
         $(byXpath("a[.='" + pikadon + "']")).click();
         $("input#MKMH").shouldHave(Condition.value(pikadon));
-
-
-
-
 
 
         //updating dates
