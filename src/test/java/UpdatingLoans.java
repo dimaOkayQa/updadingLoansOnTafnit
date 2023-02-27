@@ -12,21 +12,13 @@ import static com.codeborne.selenide.Selectors.byAttribute;
 public class UpdatingLoans {
 
 
-    @BeforeAll
-    public static void setupAllureReports() {
+    public static void main(String[] args) {
         Configuration.browser = "internet explorer";
         Configuration.browserSize = "1920x1080";
-    }
-
-
-
-
-    @Test
-    public void updateLoans(){
 
 
         //Sign in
-        $("http://10.192.64.1/MENU1/LOGIN7.CSP?LoginGUID=&CSPCHD=00fp00000000t7gBY0wBWgDROBNTGbttxjoQYgqrdO3MvSX8j7");
+        open("http://10.192.64.1/MENU1/LOGIN7.CSP?LoginGUID=&CSPCHD=00fp00000000t7gBY0wBWgDROBNTGbttxjoQYgqrdO3MvSX8j7");
         $(byAttribute("name", "Username")).setValue("GILF");
         $(byAttribute("name", "Password")).setValue("Louie2022Taf");
         $("div.loginBtns input").click();
